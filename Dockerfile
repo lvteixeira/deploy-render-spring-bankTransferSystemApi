@@ -13,6 +13,9 @@ COPY build.gradle settings.gradle ./
 # Copy the source code
 COPY src src
 
+# Make the Gradle wrapper executable
+RUN chmod +x ./gradlew
+
 # Build the application
 RUN ./gradlew build
 
